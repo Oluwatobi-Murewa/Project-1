@@ -17,6 +17,12 @@
         color: #f8f7ff;
         background: #090b1a;
       }
+      nav { position: fixed; top: 0; left: 50%; width: min(90vw, 720px); transform: translateX(-50%); padding: 1.4rem 0; display: flex; align-items: center; justify-content: space-between; }
+      .brand { color: #fff; text-decoration: none; font-weight: 800; letter-spacing: -.04em; font-size: 1.05rem; }
+      .brand span { color: #80ffe6; }
+      .links { display: flex; gap: .35rem; }
+      .links a { color: #c7c9e6; text-decoration: none; padding: .5rem .75rem; border-radius: 99px; font-size: .88rem; font-weight: 650; }
+      .links a:hover { color: #fff; background: rgba(255,255,255,.12); }
       body::before, body::after {
         content: "";
         position: fixed;
@@ -53,16 +59,25 @@
       }
       .message { margin: 1.8rem auto 0; max-width: 32rem; color: #e5e5f7; font-size: clamp(1rem, 2vw, 1.18rem); line-height: 1.65; }
       .line { width: 72px; height: 4px; margin: 2rem auto 0; border-radius: 99px; background: linear-gradient(90deg, #a995ff, #66f6dc); }
+      .actions { display: flex; justify-content: center; flex-wrap: wrap; gap: .75rem; margin-top: 2rem; }
+      .action { padding: .75rem 1.05rem; border: 1px solid rgba(255,255,255,.2); border-radius: 99px; color: #f8f7ff; background: rgba(255,255,255,.08); text-decoration: none; font-size: .92rem; font-weight: 750; }
+      .action.primary { color: #071513; border-color: transparent; background: #80ffe6; }
+      .action:hover { transform: translateY(-2px); }
       @keyframes float { 50% { transform: translateY(-10px) rotate(8deg); } }
     </style>
   </head>
   <body>
+    <nav aria-label="Main navigation"><a class="brand" href="hello-world.html">hello<span>.</span></a><div class="links"><a href="about.html">About</a><a href="contact.html">Contact</a></div></nav>
     <main>
       <div class="spark" aria-hidden="true">✦</div>
       <p>A small beginning</p>
       <h1>Hello, World!</h1>
       <div class="line"></div>
       <div class="message">Something wonderful starts with a single line of code.</div>
+      <div class="actions">
+        <a class="action" href="about.html">About us</a>
+        <a class="action primary" href="contact.html">Get in touch →</a>
+      </div>
     </main>
   </body>
 </html>

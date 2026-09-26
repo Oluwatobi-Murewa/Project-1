@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About | Hello, World!</title>
+    <style>
+      :root { color-scheme: dark; }
+      * { box-sizing: border-box; }
+      body {
+        min-height: 100vh; margin: 0; overflow-x: hidden;
+        font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        color: #f8f7ff; background: #090b1a;
+      }
+      body::before, body::after { content: ""; position: fixed; width: 42rem; height: 42rem; border-radius: 50%; filter: blur(36px); opacity: .42; z-index: -1; }
+      body::before { background: #6d4aff; top: -20rem; left: -15rem; }
+      body::after { background: #00c2a8; right: -18rem; bottom: -22rem; }
+      nav { width: min(92vw, 1080px); margin: 0 auto; padding: 1.6rem 0; display: flex; align-items: center; justify-content: space-between; }
+      .brand { color: #fff; text-decoration: none; font-weight: 800; letter-spacing: -.04em; font-size: 1.15rem; }
+      .brand span { color: #80ffe6; }
+      .links { display: flex; gap: .35rem; }
+      .links a { color: #c7c9e6; text-decoration: none; padding: .55rem .85rem; border-radius: 99px; font-size: .92rem; font-weight: 650; }
+      .links a:hover, .links a[aria-current="page"] { color: #fff; background: rgba(255,255,255,.12); }
+      main { width: min(92vw, 980px); margin: clamp(2.5rem, 8vw, 7rem) auto; }
+      .eyebrow { margin: 0 0 1rem; color: #80ffe6; font-size: .74rem; letter-spacing: .16em; text-transform: uppercase; font-weight: 750; }
+      h1 { max-width: 11ch; margin: 0; font-size: clamp(3.2rem, 8vw, 6.5rem); line-height: .96; letter-spacing: -.075em; background: linear-gradient(100deg, #fff 15%, #bbaeff 55%, #80ffe6); -webkit-background-clip: text; background-clip: text; color: transparent; }
+      .intro { max-width: 36rem; margin: 1.8rem 0 3rem; color: #dfe0f5; font-size: 1.12rem; line-height: 1.7; }
+      .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; }
+      .card { min-height: 190px; padding: 1.65rem; border: 1px solid rgba(255,255,255,.16); border-radius: 22px; background: linear-gradient(135deg, rgba(255,255,255,.12), rgba(255,255,255,.04)); box-shadow: 0 18px 50px rgba(0,0,0,.18); backdrop-filter: blur(16px); }
+      .number { margin: 0 0 .7rem; color: #a995ff; font-size: .8rem; font-weight: 800; letter-spacing: .1em; }
+      h2 { margin: 0 0 .7rem; font-size: 1.25rem; letter-spacing: -.03em; }
+      .card p { margin: 0; color: #c7c9e6; line-height: 1.55; font-size: .95rem; }
+      .cta { margin-top: 1rem; padding: 1.7rem; display: flex; align-items: center; justify-content: space-between; gap: 1rem; border: 1px solid rgba(128,255,230,.26); border-radius: 22px; background: rgba(0,194,168,.08); }
+      .cta p { margin: 0; font-weight: 700; font-size: 1.05rem; }
+      .button { display: inline-block; padding: .8rem 1.15rem; color: #071513; background: #80ffe6; border-radius: 99px; text-decoration: none; font-weight: 800; white-space: nowrap; }
+      @media (max-width: 680px) { .cards { grid-template-columns: 1fr; } .cta { align-items: flex-start; flex-direction: column; } }
+    </style>
+  </head>
+  <body>
+    <nav aria-label="Main navigation">
+      <a class="brand" href="hello-world.html">hello<span>.</span></a>
+      <div class="links"><a href="about.html" aria-current="page">About</a><a href="contact.html">Contact</a></div>
+    </nav>
+    <main>
+      <p class="eyebrow">A little about us</p>
+      <h1>Built for bright beginnings.</h1>
+      <p class="intro">Hello, World! is a tiny corner of the internet for curious people, fresh ideas, and the delightful first step of making something new.</p>
+      <section class="cards" aria-label="Our values">
+        <article class="card"><p class="number">01</p><h2>Stay curious</h2><p>The best projects begin with a question and grow through a willingness to explore.</p></article>
+        <article class="card"><p class="number">02</p><h2>Keep it human</h2><p>Good technology should feel clear, welcoming, and made with people in mind.</p></article>
+        <article class="card"><p class="number">03</p><h2>Make a start</h2><p>There is magic in a first draft, a brave experiment, and a simple “hello.”</p></article>
+      </section>
+      <section class="cta" aria-label="Contact invitation"><p>Have an idea you would like to share?</p><a class="button" href="contact.html">Say hello →</a></section>
+    </main>
+  </body>
+</html>
